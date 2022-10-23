@@ -1,0 +1,27 @@
+﻿
+@{
+    // .cshtml uzantılı view sayfalarında @ sembolu ile başlayarak c# kodlu yazma işlemine razor syntax denir.
+    string name = "Ibrahim";
+    string[] isimler = new string[]{"ali", "Veli", "ayşe", "Fatma"
+
+    };
+}
+<h1>Mvc Razor Syntax Kullanımı</h1>
+<p>.cshtml uzantılı view sayfalarında @@ sembolu ile başlayarak c# kodlu yazma işlemine razor syntax denir.</p>
+<h2>değişkeni ekrana yazdırma</h2>
+<p>@name</p>
+<h3>İsimler</h3>
+
+    @foreach(var isim in isimler){
+        if (isim=="ali")
+        {
+        <h5>@isim+Merhaba</h5>
+        }
+        else
+        {
+            <h5>@isim+Selam</h5>
+
+        }
+    
+    }
+

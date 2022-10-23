@@ -1,0 +1,26 @@
+﻿
+@{
+}
+<h1>Hakkımızda</h1>
+<p>Lorem Ipsum </p>
+<p>Css image ve js dosylarını templetten alıanacak entegre edilecekse roota atılması gerekir başka yerde çalışmaz</p>
+<p>Eğer html dosyamızın içinde js image ve css bostrap gibi dosyalar eklenmişse bu yine çalışır, roote taşınmasına gerek yoktur.</p>
+<p>Eğer hazır templete kullanacaksak tema klasörünü roote atmamız gerekiyor. </p>
+<p>Wiew Start Dosyası</p>
+<p>View klasörü altındaki _ViewStart dosyası içerisinde Layout ="_Layout" kodu ile oluşturduğuımuz view lerin varsayılan olarak hangi şablonun kullanılacağını belirler</p>
+<h2>_ViewImports dosyası</h2>
+<p>Bu dosya içerisinde projemizde kullanacağımız standart kütüphaneleri belirleyerek her seferinde sayfasda using kullanarak kod yazmaktan kurtulmamzı sağlanır.</p>
+<h3>Proporties ve louchsetting.json ayarları </h3>
+<p>Uygulama çalıştıktan sonra uygulamayı nasıl çalıştığı ile ilgili gerekl iayarların yapıldığı yerdir. </p>
+<p>aSP NET CORE İLE birlikte IIS dışında varsayılan olark kullanılan Kestrel Server adında bir yapı getirildi.Satart veya play iconu tıkladığımızda tercih ettiğimiz server e göre laucchSettings.json dosyasındaki ayarlara göre uygulamamızı çalışır  </p>
+<h3>Menuyu değiştirme veya yeni sayfayı menüye ekleme</h3>
+<p>Üst menüye(headere ) sayfa eklemek için veya altatki ffootere değişiklik yapmak için View klasörü  altındaki Shared klasörü altındaki  genişletip _Layout.cshtml dsoyasını açarak bu alandaki değişiklik yapabiliriz. </p>
+<p>_Layout veya başka bir sayfada kullanılan asp-conroller="" diğeri asp-action="" gibi atributeleri o element tetiklendiğinde örneğin menüye tıkladığımızda çalıştırılacak olan kontroller ve içindeki action ları ifade eder. </p>
+<p> </p>
+<h3>Mvc Projesinde Layout değişimi </h3>
+<p> Bu işlem için  View klasörü altındaki ViewStart.cshtml dosyasını açıp buradaki LAyout=" " kısmındaki layout adını değiştirerek işlemi gerçekleştirebiliriz. </p>
+<h3>appsettings.json dosyası </h3>
+<p>Bu dosya uygulamamızı genel ayarların tutulduğu dosyadır. Veritabanı bağlantı bilgisi veya sitede kullanılacak mail bilgileri gibi verileri bu dosyada saklayıp uygulamanın her yerinden ulaşılmasını sağlar. </p>
+<h3>Program.Cs Dosyası</h3>
+<p>Bu class mvc uygulamamızla alakalı tüm yapıların belirlendiği dosyadır. İlk olarak çalışan class ve projenin kalbidir diyebiliriz.</p>
+

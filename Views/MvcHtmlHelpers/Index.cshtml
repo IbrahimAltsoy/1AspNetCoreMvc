@@ -1,0 +1,68 @@
+﻿
+@{
+}
+<h1>HtmlHelpers</h1>
+<p>Mvc de sayfadaki html elementlerini oluşturabilmemizi sağyalan yardımcı metotlara html helpers denir</p>
+@Html.ActionLink("HtmlHelpers ActionLink a elementinin oluşmasını sağlar","Index")
+<hr />
+@Html.ActionLink("HtmlHelpers ActionLink a elementinin oluşmasını sağlar ve farklı bir controllerden getirmesini sağlar","Index","Home")
+<hr />
+<h3>Html Checkbox elementini oluşturma</h3>
+@Html.CheckBox("onay") Onaylıyorum
+<br />
+<input id="onay" name="onay" type="checkbox" value="true">Onaylama
+<br />
+<h3>TextBox oluşturma</h3>
+@Html.TextBox("İsim:")
+<br />
+<input id="zsim:" name="İsim:" type="text" value="">İsim giriniz
+<hr />
+<h3>Html Hidden elementini oluşturma</h3>
+@Html.Hidden("Gizli element", "Hidden elementiyle arka tarafta userin görmek istemediğimiz emelentin oluşturmamızı sağlar")
+<hr />
+<h3>Html Label  elementini oluşturma</h3>
+@Html.Label("LABEL Adınız:", "Html label element oluşturma")
+<hr />
+<h3>Html TextArena  elementini oluşturma</h3>
+@Html.TextArea("Textarea Adınız:", "Html textarea element oluşturma")
+<hr />
+<h3>Html Password  elementini oluşturma</h3>
+@Html.Password("Password Adınız:", "Html Password element oluşturma")
+<hr />
+<h3>Html Helpers ile Form oluşturma</h3>
+@using(Html.BeginForm()){
+    <h4>Adınız:</h4>
+    @Html.Editor("txtKullaniciAdi:")
+    <h4>Şifre:</h4>
+    @Html.Editor("txtPasword:")
+    
+    <br />
+    <input type="submit" value="Giriş"/>
+
+
+}
+<br />
+<h3>
+    Html Helpers ile ListBox Oluşturma
+</h3>
+@{
+    SelectListItem[] liste = new SelectListItem[]
+                    {
+                new SelectListItem() {Text="Bilgisayar"},
+                new SelectListItem() {Text="süpürge Makinası"},
+                new SelectListItem() {Text="Robot"},
+                new SelectListItem() {Text="Tv"},
+                new SelectListItem() {Text="Iphone"}
+            };
+    string mesaj = "<div class='alert alert-success'> Mesaınız iletildi</div>";
+
+
+}
+@Html.ListBox("LblListe",liste)
+@Html.DropDownList("Liste",liste)
+<br />
+<h3> Html Radio Buton oluşturma</h3>
+@Html.RadioButton("rbOnay","Onaylıyorum")Sözleşmeyi onaylıyorum
+<br />
+<h3>Html Helpers Raw metodu ile Html içerikoluşturma</h3>
+@mesaj
