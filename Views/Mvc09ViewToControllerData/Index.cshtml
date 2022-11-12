@@ -1,0 +1,57 @@
+﻿
+@{
+}
+<h1>Mvc View dan Controllera Veri Gönderme</h1>
+<h2>Get Metodu ile Veri Gönderme</h2>
+<form asp-action="Index" method="get">
+    <input type="text" name="txtAra"/>
+    <button type="submit">Ara</button>
+</form>
+@ViewBag.GetVerisi
+@ViewBag.Deger
+<hr />
+<h2>Post Metodu ile Veri Gönderme</h2>
+@{
+    SelectListItem[] liste = {
+        new SelectListItem(){Text="Bilgisayar"},
+        new SelectListItem(){Text="Monitor"},
+        new SelectListItem(){Text="Klavye"},
+        new SelectListItem(){Text="Mause"},
+        new SelectListItem(){Text="Tablet"}
+    };
+}
+<form asp-action="Index" method="post">
+    @Html.TextBox("text1")
+    <hr />
+    @Html.DropDownList("ddlliste",liste)
+    <hr />
+    @Html.CheckBox("cbonay") <label>Onaylıyorm</label>
+    <input type="submit" value="Gönder"/>
+
+
+</form>
+<hr />
+<h3>2.Yöntem Parametrelerden gelen veriler</h3>
+@ViewBag.text1
+<hr />
+@ViewBag.ddlliste
+
+<hr />
+@ViewBag.cbonay
+<h3>3.Yöntem Request.Form dan gelen veriler</h3>
+@ViewBag.text2
+<hr />
+@ViewBag.ddlliste2
+
+<hr />
+@ViewBag.cbonay3
+<hr />
+@ViewBag.cbonay
+<h3>3.Yöntem IFormCollection  dan gelen veriler</h3>
+@ViewBag.text3
+<hr />
+@ViewBag.ddlliste3
+
+<hr />
+@ViewBag.cbonay2
+

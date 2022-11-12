@@ -1,0 +1,70 @@
+﻿@model Kullanici
+@{
+    ViewData["Title"] = "Kullanıcı Bilgileri";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Kullanıcı Bilgileri</h1>
+
+<table>
+    <tr>
+        <td>Id: </td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td>Ad: </td> <td>@Model.Ad</td>
+    </tr>
+    <tr>
+        <td>Soayd: </td>
+        <td>@Model.Soyad</td>
+    </tr>
+    <tr>
+        <td>Email: </td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <td>Kullanıcı Adı: </td>
+        <td>@Model.KulaniciAdi</td>
+    </tr>
+    <tr>
+        <td>Şifre: </td>
+        <td>@Model.Sifre</td>
+    </tr>
+</table>
+<h3>Model kullanarak Controle Veri Gönderme</h3>
+<form asp-action="KullaniciSayfasi">
+    <table>
+        <tr>
+            <td>Id: </td>
+            <td>@Html.TextBoxFor(model=>model.Id)</td>
+        </tr>
+        <tr>
+            <td>Ad: </td>
+            <td>@Html.TextBoxFor(model=>model.Ad)</td>
+        </tr>
+        <tr>
+            <td>soyad: </td>
+            <td>@Html.TextBoxFor(model=>model.Soyad)</
+        </tr>
+        
+        <tr>
+            <td>Email: </td>
+            <td>@Html.TextBoxFor(model=>model.Email)</
+        </tr>
+        <tr>
+            <td>Kullanıcı Adı: </td>
+            <td> <input asp-for="KulaniciAdi"></input></td>
+          
+        </tr>
+        <tr>
+            <td>Şifre: </td>
+            <td> <input asp-for="Sifre"></input></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Kaydet" class="btn btn-primary"/>
+            </td>
+        </tr>
+    </table>
+
+</form>

@@ -65,4 +65,48 @@
 @Html.RadioButton("rbOnay","Onaylıyorum")Sözleşmeyi onaylıyorum
 <br />
 <h3>Html Helpers Raw metodu ile Html içerikoluşturma</h3>
-@mesaj
+<div class="alert alert-success">Mesajınız iletildi.</div>
+@Html.Raw(mesaj)
+@Html.Raw("Mesajınız tamamdır")
+@using (Html.BeginForm())
+{
+    <div class="container" id="iletisimFormu">
+        <div class="row">
+            <div class="col">Adınız</div>
+            <div class="col">
+                @Html.TextBox("txtAdi", null, null, new{@class="form-control"})
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">soyadınız</div>
+            <div class="col">@Html.TextBox("txtsoyad", null, null, new{@class="form-control"})</div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">email</div>
+            <div class="col">
+                @Html.TextBox("txtEmail", null, null, new{@class="form-control"})
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">Telefon</div>
+            <div class="col">@Html.TextBox("txtTelefon")</div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">Tc Kimlik No</div>
+            <div class="col">
+                <input type="number" maxlength="11" minlength="11"  required/>
+            </div>
+            
+        </div>
+        <div class="row mt-3">
+            <div class="col">Mesajınız</div>
+            <div class="col">@Html.TextArea("txtMesaj","Text Area", 5, 2, new{@class="form-control"})</div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center"><input type="submit" value="Gönder" class="bbtn btn-primary"/></div>
+            
+        </div>
+
+    </div>
+
+}

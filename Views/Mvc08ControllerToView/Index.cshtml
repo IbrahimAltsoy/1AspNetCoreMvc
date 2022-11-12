@@ -1,0 +1,23 @@
+﻿
+@{
+}
+<h1>Conrollerden View q Veri Gönderme</h1>
+<h3>Urun bilgileri</h3>
+<table class="table">
+    <tr>
+        <td>Urun Kategorisi</td>
+        <td>@ViewBag.UrunKAtegori</td>
+
+    </tr>
+    <tr>
+        <td>Urün Adı</td>
+        <td>@ViewData["UrunAdi"]</td>
+
+    </tr>
+    <tr>
+        <td>Fiyat</td>
+        <td>@TempData["UrunFiyat"]</td>
+
+    </tr>
+   
+</table>

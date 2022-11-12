@@ -1,0 +1,55 @@
+﻿@model UyeSayfasiModelView
+@{
+    ViewData["Title"] = "Uye Sayfasi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Uye Sayfasına Hoşgeldiniz</h1>
+
+<h1>Kullanıcı Bilgileri</h1>
+
+<table>
+    <tr>
+        <td>Id: </td>
+        <td>@Model.Kullanici.Id</td>
+    </tr>
+    <tr>
+        <td>Ad: </td>
+        <td>@Model.Kullanici.Ad</td>
+    </tr>
+    <tr>
+        <td>Soayd: </td>
+        <td>@Model.Kullanici.Soyad</td>
+    </tr>
+    <tr>
+        <td>Email: </td>
+        <td>@Model.Kullanici.Email</td>
+    </tr>
+    <tr>
+        <td>Kullanıcı Adı: </td>
+        <td>@Model.Kullanici.KulaniciAdi</td>
+    </tr>
+    <tr>
+        <td>Şifre: </td>
+        <td>@Model.Kullanici.Sifre</td>
+    </tr>
+</table>
+<br />
+<table class="table">
+    <tr>
+        <td>Id: </td>
+        <td>@Model.Adres.Id</td>
+    </tr>
+    <tr>
+        <td>Şehir: </td>
+        <td>@Model.Adres.Sehir</td>
+    </tr>
+    <tr>
+        <td>İlçe: </td>
+        <td>@Model.Adres.Ilce</td>
+    </tr>
+    <tr>
+        <td>Açık Adres: </td>
+        <td>@Model.Adres.AcikAdres</td>
+    </tr>
+</table>

@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    DateTime datetime = DateTime.Now;
+}
+<h1>String format işlemleri ile verileri formatlayabiliriz.</h1>
+<h2>Tarih Formatlama</h2>
+<p>@datetime</p>
+<h2>Tarih Formatlama</h2>
+<p>@("Kısa Tarih:  "+string.Format("{0:d}",datetime))</p>
+<hr />
+<p>@("Kısa Saat: " + string.Format("{0:t}", datetime))</p>
+<hr />
+<p>@("Kısa yıl  " + string.Format("{0:yyyy}", datetime))</p>
+
+<h2>Sayı Formatlama</h2>
+<p>@("Fiyat:  " + string.Format("{0:c}", 49.90))</p>
+<hr />
+0:D3 + @string.Format("{0:D3}", 10)
+<hr />
+0:D5 + @string.Format("{0:D5}", 10)
+<hr />
+0:F1 + @string.Format("{0:F1}", 15.90)
+<hr />
+0:F21 + @string.Format("{0:F21}", 15.95)
+<hr />
+0:F3 + @string.Format("{0:F3}", 15.95)
+

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/_1AspNetCoreMvc.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("OzelCss", required: false)
 </head>
 <body>
     <header>
@@ -29,6 +30,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">Hakkımızda</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mvc09ViewToControllerData" asp-action="Index">Mvc09ViewToControllerData</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mvc10ModelBinding" asp-action="Index">Mvc10ModelBinding</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="MvcRazorSyntax" asp-action="Index">RazorSyntax</a>
                         </li>
                         <li class="nav-item">
@@ -37,6 +44,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="MvcHtmlHelpers" asp-action="Index">HtmlHelpers</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mvc03Post" asp-action="Index">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mvc04HttpUtility" asp-action="Index">Http Utility</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="StringFormat" asp-action="Index">String Format</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mvc06Section" asp-action="Index">Section Kullanımı</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Mvc08ControllerToView" asp-action="Index">Mvc08ControllerToView Kullanımı</a>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -47,7 +70,8 @@
             @RenderBody()
         </main>
     </div>
-
+    
+    @await RenderSectionAsync("Ozelİcerik", required: false)
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - _1AspNetCoreMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
